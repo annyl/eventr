@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="/static/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <div id="sidebar">
+        <h2>Eventr</h2>
+        <p>What's up around here?</p>
+    </div>
+</body>
+</html>

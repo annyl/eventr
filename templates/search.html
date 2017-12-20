@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Что ищем?</h1>
+<form action="/search" method="get">
+    <p>
+        Введите свой запрос:
+        <br>
+        <br>
+        <input type="text" name="q" placeholder="Что ты хочешь найти?"><br>
+        <input type="text" name="city" placeholder="Нижний Новгород"><br>
+    </p>
+    <p><input type="submit" value="Искать"></p>
+</form>
+{% endblock %}

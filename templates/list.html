@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} {{ query }}  {% endblock %}
+{% block content %}
+    <h1>События</h1>
+    {% if events %}
+        {% for event in events %}
+            <h2 class="date"> <em class="structure"> Когда: </em> <em class="digits"> {{ event['date'] }}</em> </h2>
+            <h2><em class="structure">Что:</em> {{ event['snippet'] }} <br> <a  target="_blank" href="{{ event['link'] }}">  читать далее</a> </h2>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <h2>Событий по вашему запросу не найдено</h2>
+    {% endif %}
+{% endblock %}
